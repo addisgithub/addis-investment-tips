@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="./index.js"></script>  
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>  
+</head>
+
+<body>
+    <noscript> Javascript is not enabled on this browser</noscript>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent" style="position: absolute; top: 0; left: 0; right: 0;">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-azure desktop-only" href="#cardContainer"><i class="fa fa-lightbulb"></i>&nbsp;Ideas</a>
+            </li>
+        </ul>
+        <button class="navbar-toggler" style="color:azure !important; border: none !important; outline: none !important;" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav m-0 ml-lg-auto p-3 p-lg-0">
+                <li class="d-inline d-lg-none">
+                    <button data-toggle="collapse" data-target="#nav" class="close float-right">&times;</button>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-truncate mobile-only" href="#"><i class="fa fa-lightbulb"></i>&nbsp;Ideas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-truncate text-azure" href="#" onclick="window.open('./Resume.pdf','_blank')"><i class="fas fa-file-alt"></i>&nbsp;Resume</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="wrapper">
+        <div style="height: 100vh;">
+            <div class="background-banner">
+                <h1 style="position:absolute; top: 30%; left: 10%; color: white; max-width: 30%;">Investment strategies</h1>
+            </div>
+        </div>
+        <div>
+            <br/>
+            <div class="container" id="cardContainer">
+            </div>
+            <br/>
+        </div>
+
+        <div style="background-color: #eeeeee; color: Black ">
+            <br/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <h2 class="text-center mb-0" style="font-weight: 700;">SHARE YOUR INNOVATIONS</h2>
+                        <h2 class="text-center mt-0" style="text-decoration: line-through;">&emsp;&emsp;&emsp;</h2>
+                        <form autocomplete="off">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" placeholder="Name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Message"></textarea>
+                            </div>
+                        
+                            <div class="text-center">
+                                <div class="g-recaptcha" data-sitekey="6LcyV6MZAAAAAJurOSHKEvmBlftZbrGlWdCR-RQ8"></div>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" onclick="submitForm()" class="btn btn-outline-dark">&emsp;Submit&emsp;</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <br/>
+        </div>
+
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+            
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" id="modalTitle">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body" id="modalBody">
+                Modal Body
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: #eeeeee; color: black; text-align: left; margin-left: 5%;">
+        <br/>
+        <p>Contact</p>
+        <p><a href="mailto:addis.bogale@ucollege.edu">addis.bogale@ucollege.edu</a></p>
+        <p> 402-217-8536</p>
+        <br/>
+    </footer>
+</body>
+</html>

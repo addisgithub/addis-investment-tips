@@ -1,0 +1,102 @@
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background-color: #eeeeee !important;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.signature {
+    float: right;
+}
+.background-banner {
+    height: 100%;
+    background-image: url('./background1.png'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.g-recaptcha {
+    display: inline-block;
+    margin-bottom: 3%;
+}
+.text-azure {
+    color: azure !important;
+}
+
+.card {
+    margin-bottom: 5% !important;
+}
+
+.zoom {
+    transition: transform .2s;
+    border-radius: 10%;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+    z-index: 1000;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (min-width: 992px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse.collapsing .navbar-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -45%;
+        transition: all 0.2s ease;
+    }
+
+    .navbar-collapse.show .navbar-nav {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        flex-direction: column;
+        height: auto;
+        width: 45%;
+        transition: left 0.35s ease;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        background-color: azure !important;
+    }
+
+    .text-truncate {
+        color: rgb(0,0,0,.5) !important;
+    }
+
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1198px) {
+    .background-banner {
+        background-image: url('./background2.png'); 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .background-banner {
+        background-image: url('./background3.png'); 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
